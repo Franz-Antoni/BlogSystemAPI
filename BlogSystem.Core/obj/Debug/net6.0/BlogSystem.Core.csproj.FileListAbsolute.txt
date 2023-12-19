@@ -1,0 +1,11 @@
+D:\Proyectos\BlogSystem\BlogSystem.Core\bin\Debug\net6.0\BlogSystem.Core.deps.json
+D:\Proyectos\BlogSystem\BlogSystem.Core\bin\Debug\net6.0\BlogSystem.Core.dll
+D:\Proyectos\BlogSystem\BlogSystem.Core\bin\Debug\net6.0\BlogSystem.Core.pdb
+D:\Proyectos\BlogSystem\BlogSystem.Core\obj\Debug\net6.0\BlogSystem.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\Proyectos\BlogSystem\BlogSystem.Core\obj\Debug\net6.0\BlogSystem.Core.AssemblyInfoInputs.cache
+D:\Proyectos\BlogSystem\BlogSystem.Core\obj\Debug\net6.0\BlogSystem.Core.AssemblyInfo.cs
+D:\Proyectos\BlogSystem\BlogSystem.Core\obj\Debug\net6.0\BlogSystem.Core.csproj.CoreCompileInputs.cache
+D:\Proyectos\BlogSystem\BlogSystem.Core\obj\Debug\net6.0\BlogSystem.Core.dll
+D:\Proyectos\BlogSystem\BlogSystem.Core\obj\Debug\net6.0\refint\BlogSystem.Core.dll
+D:\Proyectos\BlogSystem\BlogSystem.Core\obj\Debug\net6.0\BlogSystem.Core.pdb
+D:\Proyectos\BlogSystem\BlogSystem.Core\obj\Debug\net6.0\ref\BlogSystem.Core.dll
