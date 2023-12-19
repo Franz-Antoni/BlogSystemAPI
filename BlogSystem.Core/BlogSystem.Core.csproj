@@ -8,9 +8,9 @@
 
   <ItemGroup>
     <Folder Include="Commons\" />
+    <Folder Include="Dtos\" />
     <Folder Include="Exceptions\" />
     <Folder Include="Enums\" />
-    <Folder Include="Dtos\" />
     <Folder Include="Services\" />
   </ItemGroup>
 
