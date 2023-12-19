@@ -10,5 +10,6 @@ namespace BlogSystem.Core.Interfaces
     public interface IPostRepository
     {
         Task<IEnumerable<Post>> GetPostsAsync();
+        Task<Post?> GetPostByIdAsync(int id);
     }
 }

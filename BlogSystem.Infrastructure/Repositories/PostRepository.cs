@@ -19,6 +19,12 @@ namespace BlogSystem.Infrastructure.Repositories
             _context = context;
         }
 
+        public async Task<Post?> GetPostByIdAsync(int id)
+        {
+            var post = await _context.Posts.FirstOrDefaultAsync(x => x.Id == id);
+            return post;
+        }
+
         public async Task<IEnumerable<Post>> GetPostsAsync()
         {
             var posts = await _context.Posts.ToListAsync();

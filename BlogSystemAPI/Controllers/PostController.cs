@@ -1,6 +1,7 @@
 ﻿using BlogSystem.Core.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Net;
 
 namespace BlogSystem.Api.Controllers
 {
@@ -20,6 +21,19 @@ namespace BlogSystem.Api.Controllers
         {
             var posts = await _postRepository.GetPostsAsync();
             return Ok(posts);
+        }
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetPostById([FromRoute]int id)
+        {
+            var post = await _postRepository.GetPostByIdAsync(id);
+
+            if (post == null) 
+            {
+                return NotFound();
+            }
+
+            return Ok(post);
         }
     }
 }
