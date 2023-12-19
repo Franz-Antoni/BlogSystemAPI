@@ -1,3 +1,8 @@
+using BlogSystem.Core.Interfaces;
+using BlogSystem.Infrastructure.Data;
+using BlogSystem.Infrastructure.Repositories;
+using Microsoft.EntityFrameworkCore;
+
 namespace BlogSystemAPI
 {
     public class Program
@@ -9,6 +14,10 @@ namespace BlogSystemAPI
             // Add services to the container.
 
             builder.Services.AddControllers();
+            builder.Services.AddScoped<IPostRepository, PostRepository>();
+            builder.Services.AddDbContext<BlogSystemContext>(options => 
+                options.UseSqlServer(builder.Configuration.GetConnectionString("ConnectionSqlServer"))
+                );
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();

@@ -9,3 +9,9 @@ D:\Proyectos\BlogSystem\BlogSystem.Infrastructure\obj\Debug\net6.0\BlogSystem.In
 D:\Proyectos\BlogSystem\BlogSystem.Infrastructure\obj\Debug\net6.0\refint\BlogSystem.Infrastructure.dll
 D:\Proyectos\BlogSystem\BlogSystem.Infrastructure\obj\Debug\net6.0\BlogSystem.Infrastructure.pdb
 D:\Proyectos\BlogSystem\BlogSystem.Infrastructure\obj\Debug\net6.0\ref\BlogSystem.Infrastructure.dll
+D:\Proyectos\BlogSystem\BlogSystem.Infrastructure\bin\Debug\net6.0\BlogSystem.Infrastructure.runtimeconfig.json
+D:\Proyectos\BlogSystem\BlogSystem.Infrastructure\obj\Debug\net6.0\BlogSystem.Infrastructure.csproj.AssemblyReference.cache
+D:\Proyectos\BlogSystem\BlogSystem.Infrastructure\obj\Debug\net6.0\BlogSystem.Infrastructure.genruntimeconfig.cache
+D:\Proyectos\BlogSystem\BlogSystem.Infrastructure\bin\Debug\net6.0\BlogSystem.Core.dll
+D:\Proyectos\BlogSystem\BlogSystem.Infrastructure\bin\Debug\net6.0\BlogSystem.Core.pdb
+D:\Proyectos\BlogSystem\BlogSystem.Infrastructure\obj\Debug\net6.0\BlogSystem.Infrastructure.csproj.CopyComplete
