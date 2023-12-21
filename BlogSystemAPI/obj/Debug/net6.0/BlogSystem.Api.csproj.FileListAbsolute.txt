@@ -70,3 +70,5 @@ D:\Proyectos\BlogSystem\BlogSystemAPI\bin\Debug\net6.0\BlogSystem.Core.pdb
 D:\Proyectos\BlogSystem\BlogSystemAPI\bin\Debug\net6.0\BlogSystem.Infrastructure.pdb
 D:\Proyectos\BlogSystem\BlogSystemAPI\bin\Debug\net6.0\Humanizer.dll
 D:\Proyectos\BlogSystem\BlogSystemAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\Proyectos\BlogSystem\BlogSystemAPI\bin\Debug\net6.0\AutoMapper.dll
+D:\Proyectos\BlogSystem\BlogSystemAPI\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

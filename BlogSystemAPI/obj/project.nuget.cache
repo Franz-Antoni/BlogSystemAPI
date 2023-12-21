@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "u+vpwTB3L+xx9nB3Ki6JBkUb+vUozXVHxmY1ZVQ/Gy69tsWKDNEuxWVxrgy/52vzbd2LaMHT7keQYdj9DMriZw==",
+  "dgSpecHash": "m3qrDWmjqr2HkbfIJ5xFRAc7GfGqtuDNltib8t+gTDhEJB6NaTGKJgZtGeonX7mb/yCTSUmZBtgSmNII4EVsnA==",
   "success": true,
   "projectFilePath": "D:\\Proyectos\\BlogSystem\\BlogSystemAPI\\BlogSystem.Api.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\anton\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\anton\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\anton\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
-    "C:\\Users\\anton\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\anton\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\anton\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
     "C:\\Users\\anton\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",
     "C:\\Users\\anton\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.25\\microsoft.entityframeworkcore.6.0.25.nupkg.sha512",

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BlogSystem.Core.Interfaces
+namespace BlogSystem.Core.Interfaces.Repositories
 {
     public interface IPostRepository
     {
