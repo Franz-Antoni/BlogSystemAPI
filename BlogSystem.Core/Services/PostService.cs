@@ -11,22 +11,22 @@ namespace BlogSystem.Core.Services
 {
     public class PostService : IPostService
     {
-        private readonly IPostRepository _postRepository;
+        private readonly IRepositoryGeneric<Post> _postRepository;
 
-        public PostService(IPostRepository postRepository)
+        public PostService(IRepositoryGeneric<Post> postRepository)
         {
             _postRepository = postRepository;
         }
 
         public async Task<Post?> GetPostByIdAsync(int id)
         {
-            var post = await _postRepository.GetPostByIdAsync(id);
+            var post = await _postRepository.GetByIdAsync(id);
             return post;
         }
 
         public async Task<IEnumerable<Post>> GetPostsAsync()
         {
-            var posts = await _postRepository.GetPostsAsync();
+            var posts = await _postRepository.GetAllAsync();
             return posts;
         }
     }

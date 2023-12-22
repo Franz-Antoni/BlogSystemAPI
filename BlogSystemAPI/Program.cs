@@ -21,7 +21,7 @@ namespace BlogSystemAPI
                 );
             builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
-            builder.Services.AddScoped<IPostRepository, PostRepository>();
+            builder.Services.AddScoped(typeof(IRepositoryGeneric<>), typeof(RepositoryGeneric<>));
             builder.Services.AddScoped<IPostService, PostService>();
 
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

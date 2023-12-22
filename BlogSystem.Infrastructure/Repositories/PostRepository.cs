@@ -12,23 +12,6 @@ namespace BlogSystem.Infrastructure.Repositories
 {
     public class PostRepository : IPostRepository
     {
-        private readonly BlogSystemContext _context;
-
-        public PostRepository(BlogSystemContext context)
-        {
-            _context = context;
-        }
-
-        public async Task<Post?> GetPostByIdAsync(int id)
-        {
-            var post = await _context.Posts.FirstOrDefaultAsync(x => x.Id == id);
-            return post;
-        }
-
-        public async Task<IEnumerable<Post>> GetPostsAsync()
-        {
-            var posts = await _context.Posts.ToListAsync();
-            return posts;
-        }
+        
     }
 }
