@@ -72,3 +72,4 @@ D:\Proyectos\BlogSystem\BlogSystemAPI\bin\Debug\net6.0\Humanizer.dll
 D:\Proyectos\BlogSystem\BlogSystemAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
 D:\Proyectos\BlogSystem\BlogSystemAPI\bin\Debug\net6.0\AutoMapper.dll
 D:\Proyectos\BlogSystem\BlogSystemAPI\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\Proyectos\BlogSystem\BlogSystemAPI\obj\Debug\net6.0\BlogSystem.Api.sourcelink.json

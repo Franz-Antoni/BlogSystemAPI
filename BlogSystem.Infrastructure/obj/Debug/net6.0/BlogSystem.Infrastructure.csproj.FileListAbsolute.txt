@@ -15,3 +15,4 @@ D:\Proyectos\BlogSystem\BlogSystem.Infrastructure\obj\Debug\net6.0\BlogSystem.In
 D:\Proyectos\BlogSystem\BlogSystem.Infrastructure\bin\Debug\net6.0\BlogSystem.Core.dll
 D:\Proyectos\BlogSystem\BlogSystem.Infrastructure\bin\Debug\net6.0\BlogSystem.Core.pdb
 D:\Proyectos\BlogSystem\BlogSystem.Infrastructure\obj\Debug\net6.0\BlogSystem.Infrastructure.csproj.CopyComplete
+D:\Proyectos\BlogSystem\BlogSystem.Infrastructure\obj\Debug\net6.0\BlogSystem.Infrastructure.sourcelink.json

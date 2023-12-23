@@ -24,7 +24,7 @@ namespace BlogSystem.Api.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAllPost() 
         {
-            var response = await _postService.GetPostsAsync();
+            var response = await _postService.GetPostsActiveAsync();
             var posts = _mapper.Map<IEnumerable<PostDto>>(response);
 
             var result = new ApiResponse<IEnumerable<PostDto>>(posts);

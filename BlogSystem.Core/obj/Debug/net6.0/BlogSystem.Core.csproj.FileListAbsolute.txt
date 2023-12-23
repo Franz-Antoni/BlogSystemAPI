@@ -9,3 +9,4 @@ D:\Proyectos\BlogSystem\BlogSystem.Core\obj\Debug\net6.0\BlogSystem.Core.dll
 D:\Proyectos\BlogSystem\BlogSystem.Core\obj\Debug\net6.0\refint\BlogSystem.Core.dll
 D:\Proyectos\BlogSystem\BlogSystem.Core\obj\Debug\net6.0\BlogSystem.Core.pdb
 D:\Proyectos\BlogSystem\BlogSystem.Core\obj\Debug\net6.0\ref\BlogSystem.Core.dll
+D:\Proyectos\BlogSystem\BlogSystem.Core\obj\Debug\net6.0\BlogSystem.Core.sourcelink.json

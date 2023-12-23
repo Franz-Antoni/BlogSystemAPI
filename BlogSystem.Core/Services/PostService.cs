@@ -29,5 +29,11 @@ namespace BlogSystem.Core.Services
             var posts = await _postRepository.GetAllAsync();
             return posts;
         }
+
+        public async Task<IEnumerable<Post>> GetPostsActiveAsync() 
+        {
+            var posts = await _postRepository.GetByConditionAsync(x => x.Status == true);
+            return posts;
+        }
     }
 }

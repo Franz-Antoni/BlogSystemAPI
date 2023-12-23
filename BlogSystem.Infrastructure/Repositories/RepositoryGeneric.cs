@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -22,6 +23,13 @@ namespace BlogSystem.Infrastructure.Repositories
         {
             var response = await _context.Set<T>().ToListAsync();
 
+            return response;
+        }
+
+        public async Task<IEnumerable<T>> GetByConditionAsync(Expression<Func<T, bool>> expression)
+        {
+            var response = await _context.Set<T>().Where(expression).AsNoTracking().ToListAsync();
+            
             return response;
         }
 
