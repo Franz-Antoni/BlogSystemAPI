@@ -6,6 +6,5 @@ namespace BlogSystem.Core.Interfaces.Services
     {
         Task<Post?> GetPostByIdAsync(int id);
         Task<IEnumerable<Post>> GetPostsAsync();
-        Task<IEnumerable<Post>> GetPostsActiveAsync();
     }
 }

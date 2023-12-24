@@ -10,8 +10,10 @@ using System.Threading.Tasks;
 
 namespace BlogSystem.Infrastructure.Repositories
 {
-    public class PostRepository : IPostRepository
+    public class PostRepository : RepositoryGeneric<Post>, IPostRepository
     {
-        
+        public PostRepository(BlogSystemContext context) : base(context)
+        {
+        }
     }
 }
