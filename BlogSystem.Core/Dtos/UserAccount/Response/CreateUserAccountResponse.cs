@@ -1,22 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace BlogSystem.Core.Entities
+namespace BlogSystem.Core.Dtos.UserAccount.Response
 {
-    public partial class UserAccount
+    public class CreateUserAccountResponse
     {
-        public UserAccount()
-        {
-            UserLogins = new HashSet<UserLogin>();
-        }
-
         public int Id { get; set; }
         public string FullName { get; set; } = null!;
         public string LastName { get; set; } = null!;
         public bool Gender { get; set; }
         public DateTime DateOfBirth { get; set; }
-        public bool Status { get; set; }
-
-        public virtual ICollection<UserLogin> UserLogins { get; set; }
     }
 }

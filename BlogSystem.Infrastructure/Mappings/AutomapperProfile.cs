@@ -22,9 +22,6 @@ namespace BlogSystem.Infrastructure.Mappings
             CreateMap<Post, PostDto>();
             CreateMap<PostDto, Post>();
 
-            CreateMap<UserAccount, UserAccountDto>();
-            CreateMap<UserAccountDto, UserAccount>();
-
             CreateMap<UserLogin, UserLoginDto>();
             CreateMap<UserLoginDto, UserLogin>();
         }

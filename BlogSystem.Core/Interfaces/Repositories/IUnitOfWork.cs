@@ -9,6 +9,7 @@ namespace BlogSystem.Core.Interfaces.Repositories
     public interface IUnitOfWork : IDisposable
     {
         IPostRepository PostRepository { get; }
+        IUserAccountRepository UserAccountRepository { get; }
         Task CompleteAsync();
     }
 }

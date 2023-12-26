@@ -18,16 +18,16 @@ namespace BlogSystem.Core.Services
             _unitOfWork = unitOfWork;
         }
 
+        public async Task<IEnumerable<Post>> GetPostsAsync()
+        {
+            var posts = await _unitOfWork.PostRepository.GetByConditionAsync(x => x.Status == true);
+            return posts;
+        }
+
         public async Task<Post?> GetPostByIdAsync(int id)
         {
             var post = await _unitOfWork.PostRepository.GetByIdAsync(id);
             return post;
-        }
-
-        public async Task<IEnumerable<Post>> GetPostsAsync() 
-        {
-            var posts = await _unitOfWork.PostRepository.GetByConditionAsync(x => x.Status == true);
-            return posts;
         }
     }
 }

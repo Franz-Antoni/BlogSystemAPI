@@ -19,12 +19,6 @@ namespace BlogSystem.Infrastructure.Repositories
             _context = context;
         }
 
-        //public async Task<IEnumerable<T>> GetAllAsync()
-        //{
-        //    var response = await _context.Set<T>().ToListAsync();
-        //    return response;
-        //}
-
         public async Task<IEnumerable<T>> GetByConditionAsync(Expression<Func<T, bool>> expression)
         {
             var response = await _context.Set<T>().Where(expression).AsNoTracking().ToListAsync();
@@ -35,6 +29,24 @@ namespace BlogSystem.Infrastructure.Repositories
         {
             var response = await _context.Set<T>().FindAsync(id);
             return response;
+        }
+
+        public async Task<T> AddAsync(T entity)
+        {
+            await _context.Set<T>().AddAsync(entity);
+            return entity;
+        }
+
+        public async Task UpdateAsync(T entity)
+        {
+            _context.Entry(entity).State = EntityState.Modified;
+            await Task.CompletedTask;
+        }
+
+        public async Task DeleteAsync(T entity)
+        {
+            _context.Entry(entity).State = EntityState.Modified;
+            await Task.CompletedTask;
         }
     }
 }

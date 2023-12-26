@@ -14,10 +14,13 @@ namespace BlogSystem.Infrastructure.Repositories
 
         public IPostRepository PostRepository { get; }
 
-        public UnitOfWork(BlogSystemContext context, IPostRepository postRepository)
+        public IUserAccountRepository UserAccountRepository { get; }
+
+        public UnitOfWork(BlogSystemContext context, IPostRepository postRepository, IUserAccountRepository userAccountRepository)
         {
             _context = context;
             PostRepository = postRepository;
+            UserAccountRepository = userAccountRepository;
         }
 
         public async Task CompleteAsync() => await _context.SaveChangesAsync();
