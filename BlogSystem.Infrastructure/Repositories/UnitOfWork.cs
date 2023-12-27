@@ -27,7 +27,7 @@ namespace BlogSystem.Infrastructure.Repositories
 
         public void Dispose()
         {
-            if (_context != null) 
+            if (_context != null)
             {
                 _context.Dispose();
             }

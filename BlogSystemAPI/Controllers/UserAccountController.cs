@@ -6,6 +6,7 @@ using BlogSystem.Core.Entities;
 using BlogSystem.Core.Interfaces.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Net;
 
 namespace BlogSystem.Api.Controllers
 {
@@ -29,6 +30,17 @@ namespace BlogSystem.Api.Controllers
             var entity = await _userAccountService.AddUserAccountAsync(request);
 
             var response = _mapper.Map<CreateUserAccountResponse>(entity);
+
+            return Ok(response);
+        }
+
+        [HttpPut]
+        public async Task<IActionResult> PutUserAccount(UpdateUserAccountRequest userAccountRequest) 
+        {
+            var request = _mapper.Map<UserAccount>(userAccountRequest);
+            var entity = await _userAccountService.UpdateUserAccountAsync(request);
+
+            var response = _mapper.Map<UpdateUserAccountResponse>(entity);
 
             return Ok(response);
         }

@@ -8,6 +8,12 @@ namespace BlogSystem.Core.Dtos.UserAccount.Response
 {
     public class UpdateUserAccountResponse
     {
-        public string? message { get; set; }
+        public string FullName { get; set; } = null!;
+        public string? message => getMessageFullName();
+
+        private string getMessageFullName() 
+        {
+            return $"El perfil del usuario {FullName}, ha sido actualizado correctamente!";
+        }
     }
 }

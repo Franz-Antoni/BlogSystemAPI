@@ -1,4 +1,5 @@
 ﻿using BlogSystem.Core.Entities;
+using BlogSystem.Core.Exceptions;
 using BlogSystem.Core.Interfaces.Repositories;
 using BlogSystem.Core.Interfaces.Services;
 using System;
@@ -40,18 +41,28 @@ namespace BlogSystem.Core.Services
             return response;
         }
 
-        public async Task UpdateUserAccountAsync(UserAccount userAccount)
+        public async Task<UserAccount?> UpdateUserAccountAsync(UserAccount userAccount)
         {
             var response = await GetUserAccountByIdAsync(userAccount.Id);
             
-            if (response != null) 
+            if (response == null) 
             {
-                await _unitOfWork.UserAccountRepository.UpdateAsync(userAccount);
-                await _unitOfWork.CompleteAsync();
+                throw new NotFoundException("No se encontro la entidad");
             }
+
+            response.FullName = userAccount.FullName;
+            response.LastName = userAccount.LastName;
+            response.Gender = userAccount.Gender;
+            response.DateOfBirth = userAccount.DateOfBirth;
+            response.Status = userAccount.Status;
+
+            await _unitOfWork.UserAccountRepository.UpdateAsync(response);
+            await _unitOfWork.CompleteAsync();
+
+            return userAccount;
         }
 
-        public async Task DeleteUserAccountAsync(int id)
+        public async Task<UserAccount?> DeleteUserAccountAsync(int id)
         {
             var response = await GetUserAccountByIdAsync(id);
             
@@ -62,6 +73,8 @@ namespace BlogSystem.Core.Services
                 await _unitOfWork.UserAccountRepository.DeleteAsync(response);
                 await _unitOfWork.CompleteAsync();
             }
+
+            return response;
         }
     }
 }
