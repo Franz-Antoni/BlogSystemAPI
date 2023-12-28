@@ -9,11 +9,19 @@ namespace BlogSystem.Core.Dtos.UserAccount.Request
 {
     public class UpdateUserAccountRequest
     {
-        public int Id { get; set; }
-        public string FullName { get; set; } = null!;
-        public string LastName { get; set; } = null!;
-        public bool Gender { get; set; }
-        public DateTime DateOfBirth { get; set; }
-        public bool Status { get; set; }
+        [Required]
+        [MaxLength(100)]
+        public string? FullName { get; set; }
+        [Required]
+        [MaxLength(100)]
+        public string? LastName { get; set; }
+        [Required]
+        public bool? Gender { get; set; }
+        [Required]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:yyyy-MM-dd}")]
+        [DataType(DataType.Date)]
+        public DateTime? DateOfBirth { get; set; }
+        [Required]
+        public bool? Status { get; set; }
     }
 }

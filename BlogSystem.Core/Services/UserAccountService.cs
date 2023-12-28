@@ -41,9 +41,9 @@ namespace BlogSystem.Core.Services
             return response;
         }
 
-        public async Task<UserAccount?> UpdateUserAccountAsync(UserAccount userAccount)
+        public async Task<UserAccount?> UpdateUserAccountAsync(int id, UserAccount userAccount)
         {
-            var response = await GetUserAccountByIdAsync(userAccount.Id);
+            var response = await GetUserAccountByIdAsync(id);
             
             if (response == null) 
             {
@@ -66,13 +66,15 @@ namespace BlogSystem.Core.Services
         {
             var response = await GetUserAccountByIdAsync(id);
             
-            if (response != null) 
+            if (response == null) 
             {
-                response.Status = false;
-
-                await _unitOfWork.UserAccountRepository.DeleteAsync(response);
-                await _unitOfWork.CompleteAsync();
+                throw new NotFoundException("No se encontro la entidad");
             }
+
+            response.Status = false;
+
+            await _unitOfWork.UserAccountRepository.DeleteAsync(response);
+            await _unitOfWork.CompleteAsync();
 
             return response;
         }

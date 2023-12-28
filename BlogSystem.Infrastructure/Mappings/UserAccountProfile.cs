@@ -14,6 +14,7 @@ namespace BlogSystem.Infrastructure.Mappings
     {
         public UserAccountProfile()
         {
+            #region CreateUserAccount
             CreateMap<CreateUserAccountRequest, UserAccount>()
                 .ForMember(dest => dest.FullName, opt => opt.MapFrom(src => src.FullName))
                 .ForMember(dest => dest.LastName, opt => opt.MapFrom(src => src.LastName))
@@ -26,9 +27,10 @@ namespace BlogSystem.Infrastructure.Mappings
                 .ForMember(dest => dest.LastName, opt => opt.MapFrom(src => src.LastName))
                 .ForMember(dest => dest.Gender, opt => opt.MapFrom(src => src.Gender))
                 .ForMember(dest => dest.DateOfBirth, opt => opt.MapFrom(src => src.DateOfBirth));
+            #endregion
 
+            #region UpdateUserAccount
             CreateMap<UpdateUserAccountRequest, UserAccount>()
-                .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.Id))
                 .ForMember(dest => dest.FullName, opt => opt.MapFrom(src => src.FullName))
                 .ForMember(dest => dest.LastName, opt => opt.MapFrom(src => src.LastName))
                 .ForMember(dest => dest.Gender, opt => opt.MapFrom(src => src.Gender))
@@ -37,6 +39,21 @@ namespace BlogSystem.Infrastructure.Mappings
 
             CreateMap<UserAccount, UpdateUserAccountResponse>()
                 .ForMember(dest => dest.FullName, opt => opt.MapFrom(src => src.FullName));
+            #endregion
+
+            #region DeleteUserAccount
+            CreateMap<UserAccount, DeleteUserAccountResponse>()
+                .ForMember(dest => dest.FullName, opt => opt.MapFrom(src => src.FullName));
+            #endregion
+
+            #region ReadUserAccount 
+            CreateMap<UserAccount, ReadUserAccountResponse>()
+                .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.Id))
+                .ForMember(dest => dest.FullName, opt => opt.MapFrom(src => src.FullName))
+                .ForMember(dest => dest.LastName, opt => opt.MapFrom(src => src.LastName))
+                .ForMember(dest => dest.Gender, opt => opt.MapFrom(src => src.Gender))
+                .ForMember(dest => dest.DateOfBirth, opt => opt.MapFrom(src => src.DateOfBirth));
+            #endregion
         }
     }
 }

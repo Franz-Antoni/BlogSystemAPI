@@ -12,7 +12,7 @@ namespace BlogSystem.Core.Interfaces.Services
         Task<UserAccount?> GetUserAccountByIdAsync(int id);
         Task<IEnumerable<UserAccount>> GetAllUserAccountAsync();
         Task<UserAccount> AddUserAccountAsync(UserAccount userAccount);
-        Task<UserAccount?> UpdateUserAccountAsync(UserAccount userAccount);
+        Task<UserAccount?> UpdateUserAccountAsync(int id, UserAccount userAccount);
         Task<UserAccount?> DeleteUserAccountAsync(int id);
     }
 }

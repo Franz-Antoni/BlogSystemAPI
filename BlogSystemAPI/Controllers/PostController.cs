@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using BlogSystem.Api.Response;
 using BlogSystem.Core.Dtos;
+using BlogSystem.Core.Dtos.Post.Response;
 using BlogSystem.Core.Interfaces.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -24,29 +25,35 @@ namespace BlogSystem.Api.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAllPost() 
         {
-            var response = await _postService.GetPostsAsync();
-            var posts = _mapper.Map<IEnumerable<PostDto>>(response);
+            var entities = await _postService.GetPostsAsync();
 
-            var result = new ApiResponse<IEnumerable<PostDto>>(posts);
+            if (!entities.Any()) 
+            {
+                return NoContent();
+            }
 
-            return Ok(result);
+            var mappingEntities = _mapper.Map<IEnumerable<ReadPostResponse>>(entities);
+
+            var response = new ApiResponse<IEnumerable<ReadPostResponse>>(mappingEntities);
+
+            return Ok(response);
         }
 
         [HttpGet("{id}")]
         public async Task<IActionResult> GetPostById([FromRoute]int id)
         {
-            var response = await _postService.GetPostByIdAsync(id);
+            var entity = await _postService.GetPostByIdAsync(id);
 
-            if (response == null) 
+            if (entity == null) 
             {
                 return NotFound();
             }
 
-            var post = _mapper.Map<PostDto>(response);
+            var mappingEntity = _mapper.Map<ReadPostResponse>(entity);
 
-            var result = new ApiResponse<PostDto>(post);
+            var response = new ApiResponse<ReadPostResponse>(mappingEntity);
 
-            return Ok(result);
+            return Ok(response);
         }
     }
 }
