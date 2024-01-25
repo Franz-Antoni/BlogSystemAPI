@@ -7,9 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Commons\" />
+    <Compile Remove="Commons\**" />
+    <Compile Remove="Enums\**" />
+    <EmbeddedResource Remove="Commons\**" />
+    <EmbeddedResource Remove="Enums\**" />
+    <None Remove="Commons\**" />
+    <None Remove="Enums\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Dtos\AccountAndLogin\Response\" />
     <Folder Include="Dtos\Post\Request\" />
-    <Folder Include="Enums\" />
   </ItemGroup>
 
 </Project>

@@ -73,3 +73,5 @@ D:\Proyectos\BlogSystem\BlogSystemAPI\bin\Debug\net6.0\Microsoft.EntityFramework
 D:\Proyectos\BlogSystem\BlogSystemAPI\bin\Debug\net6.0\AutoMapper.dll
 D:\Proyectos\BlogSystem\BlogSystemAPI\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 D:\Proyectos\BlogSystem\BlogSystemAPI\obj\Debug\net6.0\BlogSystem.Api.sourcelink.json
+D:\Proyectos\BlogSystem\BlogSystemAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Proyectos\BlogSystem\BlogSystemAPI\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll

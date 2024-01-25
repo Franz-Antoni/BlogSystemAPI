@@ -36,7 +36,7 @@ namespace BlogSystem.Core.Services
             userAccount.Status = true;
 
             var response = await _unitOfWork.UserAccountRepository.AddAsync(userAccount);
-            await _unitOfWork.CompleteAsync();
+            //await _unitOfWork.CompleteAsync();
 
             return response;
         }

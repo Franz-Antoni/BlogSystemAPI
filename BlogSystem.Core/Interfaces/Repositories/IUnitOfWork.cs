@@ -10,6 +10,7 @@ namespace BlogSystem.Core.Interfaces.Repositories
     {
         IPostRepository PostRepository { get; }
         IUserAccountRepository UserAccountRepository { get; }
+        IUserLoginRepository UserLoginRepository { get; }
         Task CompleteAsync();
     }
 }
