@@ -21,7 +21,7 @@ namespace BlogSystem.Infrastructure.Mappings
 
             CreateMap<CreateAccountAndLoginRequest, UserLogin>()
                 .ForMember(dest => dest.LoginName, opt => opt.MapFrom(src => src.UserName))
-                .ForMember(dest => dest.PasswordHash, opt => opt.MapFrom(src => src.Password))
+                .ForMember(dest => dest.Password, opt => opt.MapFrom(src => src.Password))
                 .ForMember(dest => dest.EmailAddress, opt => opt.MapFrom(src => src.EmailAddress));
         }
     }

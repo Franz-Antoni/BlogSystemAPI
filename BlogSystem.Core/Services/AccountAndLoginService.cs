@@ -25,24 +25,12 @@ namespace BlogSystem.Core.Services
 
         public async Task AddAuthentication(UserAccount userAccount, UserLogin userLogin)
         {
-            CreatePasswordHash(userLogin.PasswordHash, out string formatPassword);
-
-            userLogin.PasswordHash = formatPassword;
             var login = await _userLoginService.AddUserLoginAsync(userLogin);
 
             userAccount.UserLogins.Add(login);
             await _userAccountService.AddUserAccountAsync(userAccount);
 
             await _unitOfWork.CompleteAsync();
-        }
-
-        private void CreatePasswordHash(string password, out string passwordHash) 
-        {
-            using (var hmac = new HMACSHA512())
-            {
-                var computeHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(password));
-                passwordHash = Convert.ToBase64String(computeHash);
-            }
         }
     }
 }

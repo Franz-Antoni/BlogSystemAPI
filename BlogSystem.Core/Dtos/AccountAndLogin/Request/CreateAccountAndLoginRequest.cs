@@ -13,8 +13,10 @@ namespace BlogSystem.Core.Dtos.AccountAndLogin.Request
         public string FullName { get; set; } = null!;
         [Required]
         public string LastName { get; set; } = null!;
+        [Required]
         public bool Gender { get; set; }
         [Required]
+        [DataType(DataType.Date)]
         public DateTime? DateOfBirth { get; set; }
         [EmailAddress]
         public string EmailAddress { get; set; } = null!;

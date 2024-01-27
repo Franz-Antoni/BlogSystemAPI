@@ -14,7 +14,7 @@ namespace BlogSystem.Core.Entities
         public int Id { get; set; }
         public int UserId { get; set; }
         public string LoginName { get; set; } = null!;
-        public string PasswordHash { get; set; } = null!;
+        public string Password { get; set; } = null!;
         public string EmailAddress { get; set; } = null!;
         public bool Status { get; set; }
 

@@ -27,10 +27,10 @@ namespace BlogSystem.Infrastructure.Data.Configurations
                 .IsUnicode(false)
                 .HasColumnName("login_name");
 
-            builder.Property(e => e.PasswordHash)
+            builder.Property(e => e.Password)
                 .HasMaxLength(255)
                 .IsUnicode(false)
-                .HasColumnName("password_hash");
+                .HasColumnName("password");
 
             builder.Property(e => e.Status).HasColumnName("status");
 
