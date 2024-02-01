@@ -21,7 +21,7 @@ namespace BlogSystem.Api.Controllers
             _mapper = mapper;
         }
 
-        [HttpPost]
+        [HttpPost("Register")]
         public async Task<IActionResult> Register(CreateAccountAndLoginRequest createAccountAndLoginRequest) 
         {
             var accountRequest = _mapper.Map<UserAccount>(createAccountAndLoginRequest);
@@ -29,6 +29,15 @@ namespace BlogSystem.Api.Controllers
 
             await _accountAndLoginService.AddAuthentication(accountRequest, loginRequest);
             return Ok();
+        }
+
+        [HttpPost("Login")]
+        public async Task<IActionResult> Authentication(ReadAccountAndLoginRequest readAccountAndLoginRequest)
+        {
+            var response = await _accountAndLoginService.GetAuthentication(readAccountAndLoginRequest.EmailAddress, 
+                readAccountAndLoginRequest.Password);
+
+            return Ok(response);
         }
     }
 }

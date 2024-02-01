@@ -10,5 +10,6 @@ namespace BlogSystem.Core.Interfaces.Services
     public interface IAccountAndLoginService
     {
         Task AddAuthentication(UserAccount userAccount, UserLogin userLogin);
+        Task<UserLogin> GetAuthentication(string emailAddress, string password);
     }
 }

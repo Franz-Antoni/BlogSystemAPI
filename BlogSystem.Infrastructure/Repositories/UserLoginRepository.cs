@@ -21,5 +21,11 @@ namespace BlogSystem.Infrastructure.Repositories
             var response = await _context.Set<UserLogin>().AnyAsync(x => x.EmailAddress == emailAddress);
             return response;
         }
+
+        public async Task<UserLogin?> getUserLoginByEmail(string emailAddress)
+        {
+            var response = await _context.Set<UserLogin>().FirstOrDefaultAsync(x => x.EmailAddress == emailAddress);
+            return response;
+        }
     }
 }

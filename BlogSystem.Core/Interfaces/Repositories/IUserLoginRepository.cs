@@ -10,5 +10,6 @@ namespace BlogSystem.Core.Interfaces.Repositories
     public interface IUserLoginRepository : IRepositoryGeneric<UserLogin>
     {
         Task<bool> ExistsByEmail(string emailAddress);
+        Task<UserLogin?> getUserLoginByEmail(string emailAddress);
     }
 }

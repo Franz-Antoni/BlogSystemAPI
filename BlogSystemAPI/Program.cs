@@ -68,7 +68,6 @@ namespace BlogSystemAPI
 
             app.UseAuthorization();
 
-
             app.MapControllers();
 
             app.Run();

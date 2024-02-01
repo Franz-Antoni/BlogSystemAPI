@@ -3,12 +3,14 @@ using BlogSystem.Api.Response;
 using BlogSystem.Core.Dtos;
 using BlogSystem.Core.Dtos.Post.Response;
 using BlogSystem.Core.Interfaces.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
 
 namespace BlogSystem.Api.Controllers
 {
+    //[Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class PostController : ControllerBase

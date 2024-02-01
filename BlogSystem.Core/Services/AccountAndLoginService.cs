@@ -1,4 +1,5 @@
 ﻿using BlogSystem.Core.Entities;
+using BlogSystem.Core.Exceptions;
 using BlogSystem.Core.Interfaces.Repositories;
 using BlogSystem.Core.Interfaces.Services;
 using System;
@@ -31,6 +32,23 @@ namespace BlogSystem.Core.Services
             await _userAccountService.AddUserAccountAsync(userAccount);
 
             await _unitOfWork.CompleteAsync();
+        }
+
+        public async Task<UserLogin> GetAuthentication(string emailAddress, string password)
+        {
+            var entity = await _userLoginService.GetUserLoginByAddressAsync(emailAddress);
+
+            if (entity?.EmailAddress == null) 
+            {
+                throw new UnauthorizedException("El email no es valido.");
+            }
+
+            if (entity.Password != password) 
+            {
+                throw new UnauthorizedException("La contraseña no es valida.");
+            }
+
+            return entity;
         }
     }
 }

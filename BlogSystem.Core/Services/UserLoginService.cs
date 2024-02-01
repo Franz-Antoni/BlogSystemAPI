@@ -35,5 +35,11 @@ namespace BlogSystem.Core.Services
 
             return response;
         }
+
+        public Task<UserLogin?> GetUserLoginByAddressAsync(string emailAddress)
+        {
+            var entity = _unitOfWork.UserLoginRepository.getUserLoginByEmail(emailAddress);
+            return entity;
+        }
     }
 }

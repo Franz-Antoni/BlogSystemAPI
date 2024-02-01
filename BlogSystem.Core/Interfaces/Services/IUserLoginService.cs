@@ -10,5 +10,6 @@ namespace BlogSystem.Core.Interfaces.Services
     public interface IUserLoginService
     {
         Task<UserLogin> AddUserLoginAsync(UserLogin userLogin);
+        Task<UserLogin?> GetUserLoginByAddressAsync(string emailAddress);
     }
 }
